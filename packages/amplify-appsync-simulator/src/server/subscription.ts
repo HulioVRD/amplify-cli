@@ -83,7 +83,7 @@ export class SubscriptionServer {
 
     return await e2p(server, 'listening').then(() => {
       const address = server.address() as AddressInfo;
-      this.url = `ws://${getLocalIpAddress()}:${address.port}/`;
+      this.url = `ws://localhost:${address.port}/`;
       return server;
     });
   }

@@ -51,7 +51,7 @@ export class AppSyncSimulatorServer {
 
     this._httpServer.listen(port);
     await e2p(this._httpServer, 'listening').then(() => {
-      this._url = `http://${getLocalIpAddress()}:${port}`;
+      this._url = `http://localhost:${port}`;
     });
   }
 
